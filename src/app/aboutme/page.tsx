@@ -24,8 +24,8 @@ export default function AboutMe() {
             excited for the future. At this point I&apos;m confident that with
             the right team, I can build almost anything. 💪 <br /> It&apos;s fun
             to see the results of building useful interactive full-stack
-            applications. What are you working on next? I think I might want to
-            be a part of it. 🌟
+            applications. <br /> What are you working on next? I think I might
+            want to be a part of it. 🌟
           </p>
         </div>
       </div>

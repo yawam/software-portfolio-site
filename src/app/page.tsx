@@ -62,7 +62,7 @@ export default function Home() {
               className="space-y-4"
             >
               <Image
-                src="/Li-in-Bug.png"
+                src="/LI-In-Bug.png"
                 alt="Linked in link to my linked in page"
                 width={110}
                 height={130}
