@@ -25,7 +25,7 @@ export default function ExperienceCard({
           alt="Work Experience Page"
           fill
           style={{ objectFit: "contain" }}
-          className={`h-full rounded-t-xl bg-${bgColor} transition-all group-hover:scale-110`}
+          className={`h-full rounded-t-xl bg-white transition-all group-hover:scale-110`}
         />
       </Link>
 

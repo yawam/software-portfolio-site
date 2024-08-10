@@ -7,10 +7,12 @@ import Link from "next/link";
 import { BsDownload } from "react-icons/bs";
 import OpenToHire from "@/components/OpenToHire";
 import TechStacks from "@/components/TechStacks";
+import { Fragment } from "react";
+import RecommendationCard from "@/components/RecommendationCard";
 
 export default function Home() {
   return (
-    <>
+    <Fragment>
       <div className="flex h-[100vh] flex-col items-center justify-center">
         <div className="space-y-4 rounded-2xl border-sky-200 p-16 text-center shadow-2xl shadow-sky-300/20">
           <h1 className="text-[6rem] text-white drop-shadow-2xl">
@@ -74,16 +76,12 @@ export default function Home() {
         </div>
       </div>
       <div className="flex h-[100vh] flex-col space-y-6 pb-6">
-        <div className="border-b-[1px] border-b-sky-300 shadow-sky-300/20">
-          <h1
-            id="projects"
-            className="mx-6 text-5xl font-semibold drop-shadow-2xl"
-          >
+        <div className="mx-6 border-b-2 border-b-sky-300 pb-2 shadow-sky-300/20">
+          <h2 id="projects" className="text-3xl drop-shadow-2xl">
             Projects
-          </h1>
+          </h2>
         </div>
         <p className="mx-10 text-neutral-400">Built from scratch</p>
-
         <div className="my-4 flex items-center justify-around space-y-4">
           <ProjectCard
             href="https://plums-ioo918mj7-papa-yaw-agyeman-manus-projects.vercel.app/"
@@ -117,7 +115,6 @@ export default function Home() {
           <SkeletonCard />
           <SkeletonCard />
         </div>
-
         <div className="mx-12 my-12 flex justify-evenly space-x-12">
           <div className="flex h-[500px] w-[50%] flex-col">
             <h2 id="experience" className="justify-start text-2xl">
@@ -151,12 +148,61 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="mx-6 my-10">
+          <div className="my-10 border-b-2 border-b-sky-300 pb-2">
+            <h2 className="text-3xl drop-shadow-2xl">Recommendations</h2>
+          </div>
+          <div className="m-auto grid max-w-[90%] grid-cols-3 gap-4">
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
+              recommender_name="Papa Yaw Agyeman-Manu"
+              recommender_title="Software Developer"
+              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+            />
+          </div>
+        </div>
       </div>
       {/* To do 
       fill in work experiences and wait for inspiration 
       on hover for navigation links
       Open to hire  component
       build page links either on page or on another*/}
-    </>
+    </Fragment>
   );
 }
