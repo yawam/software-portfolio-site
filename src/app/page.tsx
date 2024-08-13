@@ -101,7 +101,7 @@ export default function Home() {
         <p className="mx-10 text-neutral-400">Clones</p>
         <div className="my-4 flex items-center justify-around space-y-4">
           <ProjectCard
-            href=""
+            href="https://spotify-clone-90q4tfeni-papa-yaw-agyeman-manus-projects.vercel.app/"
             image_url="https://utfs.io/f/3dac2974-a161-4701-8e66-dac99c86a828-mp28yr.png"
             title="Spotify Clone"
             description="Music player platform clone from Code with Antonio"
@@ -157,13 +157,13 @@ export default function Home() {
               image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
               recommender_name="Papa Yaw Agyeman-Manu"
               recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+              recommendation="recommendation content"
             />
             <RecommendationCard
               image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
               recommender_name="Papa Yaw Agyeman-Manu"
               recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+              recommendation="recommendation content"
             />
             <RecommendationCard
               image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"

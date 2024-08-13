@@ -24,7 +24,7 @@ export default function AboutMe() {
             focusing on Full-Stack Web Development and various web and software
             development technologies. I&apos;ve always had the resolve of not
             always being the user but the developer too. <br />
-            Now that I know how things work, It&apos;s been blast and I&apos;m
+            Now that I know how things work, It&apos;s been a blast and I&apos;m
             excited for the future. At this point I&apos;m confident that with
             the right team, I can build almost anything. 💪 <br /> It&apos;s fun
             to see the results of building useful interactive full-stack
@@ -63,14 +63,37 @@ export default function AboutMe() {
         <div className="flex w-full items-center justify-evenly">
           <div>
             What music does Papa Yaw listen to
-            <div className="flex h-[400px] w-[600px] animate-pulse items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
-              Spotify section
+            <div className="flex h-[400px] w-[600px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+              <iframe
+                className="h-full w-full rounded-2xl shadow-2xl shadow-sky-300/20"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1EptGqNgB5GCCA?utm_source=generator"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
           <div>
             His Favorite Video Game
-            <div className="flex h-[400px] w-[600px] animate-pulse items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
-              Fifa section
+            <div className="group relative flex h-[400px] w-[600px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+              <Image
+                src="https://utfs.io/f/90f834bc-3c4c-47bb-a618-3bb38e3d7123-1xeek8.jpeg"
+                alt="avatar xbox"
+                width={150}
+                height={120}
+                className="absolute left-2 top-2 z-20 rounded-xl opacity-0 shadow-2xl shadow-sky-300/20 transition-opacity ease-in-out group-hover:opacity-100"
+              />
+              <Image
+                src="https://utfs.io/f/73b1a222-2969-43e3-8fcc-6d5400f23d27-8n84pd.png"
+                alt="Fifa stats"
+                fill
+                style={{ objectFit: "cover" }}
+                className="z-0 rounded-xl shadow-2xl shadow-sky-300/20 transition-all group-hover:scale-95"
+              />
+              <div className="z-10 hidden h-[100%] w-[100%] items-center justify-center rounded-xl bg-black/70 text-center text-2xl text-white transition-opacity duration-500 ease-in-out group-hover:flex group-hover:opacity-100">
+                <p className="duration-1750 rounded-xl bg-black/80 p-2 opacity-0 shadow-2xl transition-opacity ease-in-out group-hover:opacity-100">
+                  FIFA <br /> <span className="text-sm">Can you beat me?</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
