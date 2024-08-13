@@ -60,10 +60,10 @@ export default function AboutMe() {
             image_url="https://utfs.io/f/b3dcd1ea-a521-4628-8f89-061bc7a58926-1t4w9r.jpg"
           />
         </div>
-        <div className="flex w-full items-center justify-evenly">
-          <div>
+        <div className="mb-2 flex w-full items-center justify-around space-x-8">
+          <div className="h-[400px] w-[50%]">
             What music does Papa Yaw listen to
-            <div className="flex h-[400px] w-[600px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+            <div className="flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
               <iframe
                 className="h-full w-full rounded-2xl shadow-2xl shadow-sky-300/20"
                 src="https://open.spotify.com/embed/playlist/37i9dQZF1EptGqNgB5GCCA?utm_source=generator"
@@ -72,9 +72,9 @@ export default function AboutMe() {
               ></iframe>
             </div>
           </div>
-          <div>
+          <div className="h-[400px] w-[50%]">
             His Favorite Video Game
-            <div className="group relative flex h-[400px] w-[600px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+            <div className="group relative flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
               <Image
                 src="https://utfs.io/f/90f834bc-3c4c-47bb-a618-3bb38e3d7123-1xeek8.jpeg"
                 alt="avatar xbox"
