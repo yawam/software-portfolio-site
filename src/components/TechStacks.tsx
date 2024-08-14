@@ -46,7 +46,7 @@ export default function TechStacks() {
   return stacks.map((stack, key) => (
     <div
       key={key}
-      className="relative overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
+      className="relative h-[150px] w-[150px] flex-shrink-0 overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
     >
       <Image
         alt={stack.alt}

@@ -33,7 +33,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="group relative z-0 flex h-[100px] w-[100px] flex-col items-center justify-center rounded-full bg-red-300 transition-all hover:-translate-y-2 hover:scale-110 hover:bg-red-400">
                 <a
-                  href="Resume6-22-2024.pdf" // Update with your resume file path
+                  href="Resume8-14-2024.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-red-700 group-hover:bg-red-800"
@@ -81,7 +81,7 @@ export default function Home() {
             Projects
           </h2>
         </div>
-        <p className="mx-10 text-neutral-400">Built from scratch</p>
+        <p className="mx-6 text-neutral-400 md:mx-10">Built from scratch</p>
         <div className="my-4 flex items-center justify-around space-x-4">
           <ProjectCard
             href="https://plums-ioo918mj7-papa-yaw-agyeman-manus-projects.vercel.app/"
@@ -96,7 +96,7 @@ export default function Home() {
             description="A website I built for my wedding to collect guest information and give information about the wedding"
           />
         </div>
-        <p className="mx-10 text-neutral-400">Clones</p>
+        <p className="mx-6 text-neutral-400 md:mx-10">Clones</p>
         <div className="my-4 flex items-center justify-around space-x-4">
           <ProjectCard
             href="https://spotify-clone-90q4tfeni-papa-yaw-agyeman-manus-projects.vercel.app/"
@@ -150,53 +150,18 @@ export default function Home() {
           </div>
           <div className="m-auto flex flex-col gap-4 md:grid md:max-w-[90%] md:grid-cols-3">
             <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="recommendation content"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="recommendation content"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
-              recommender_name="Papa Yaw Agyeman-Manu"
-              recommender_title="Software Developer"
-              recommendation="I think this guy is a genius. He's the next Zuckerberg"
+              image_url="https://utfs.io/f/a0eeddae-40b1-44e8-88fd-cb6d08b7a4b8-mym5hl.jpeg"
+              recommender_name="Freda Agyeman-Manu"
+              recommender_title="Wife"
+              recommendation="Papa Yaw demonstrated remarkable dedication in building our wedding website. He took our vision and brought it to life with a perfect blend of creativity and technical skill. The website not only functioned seamlessly but also helped us cut costs and efficiently relay important information to our guests. His hard work was evident in every detail, from the sleek design to the user-friendly interface. Papayaw’s ability to tackle challenges and deliver an exceptional final product truly sets him apart. I wholeheartedly recommend him."
             />
           </div>
         </div>
       </div>
       {/* To do 
       build contact me page 
-      finish mobile view*/}
+      finish mobile view for contact me
+      fix tech stacks CSS and add in recommendations*/}
     </Fragment>
   );
 }
