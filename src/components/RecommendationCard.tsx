@@ -13,7 +13,7 @@ export default function RecommendationCard({
   recommender_title,
 }: RecommendationCardProps) {
   return (
-    <div className="h-[200px] w-[500px] rounded-xl bg-neutral-600/30 px-2 py-4">
+    <div className="w-full rounded-xl bg-neutral-600/30 px-2 py-4 md:w-[500px]">
       <div className="mb-4 flex items-center justify-between">
         <div className="relative h-[75px] w-[75px]">
           <Image

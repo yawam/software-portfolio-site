@@ -8,7 +8,7 @@ interface HobbyCardProps {
 export default function HobbyCard({ title, image_url }: HobbyCardProps) {
   return (
     <div>
-      <div className="group relative flex h-[300px] w-[400px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+      <div className="group relative flex h-[300px] w-[300px] items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl md:w-[400px]">
         <Image
           src={image_url}
           alt="Hobby Description"

@@ -13,9 +13,9 @@ import RecommendationCard from "@/components/RecommendationCard";
 export default function Home() {
   return (
     <Fragment>
-      <div className="flex h-[100vh] flex-col items-center justify-center">
-        <div className="space-y-4 rounded-2xl border-sky-200 p-16 text-center shadow-2xl shadow-sky-300/20">
-          <h1 className="text-[6rem] text-white drop-shadow-2xl">
+      <div className="flex h-[100vh] w-full flex-col items-center justify-center">
+        <div className="space-y-4 rounded-2xl border-sky-200 p-2 text-center shadow-2xl shadow-sky-300/20 md:p-16">
+          <h1 className="text-[2rem] text-white drop-shadow-2xl md:text-[6rem]">
             Software Portfolio
           </h1>
           <div className="space-y-4 text-lg">
@@ -75,14 +75,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex h-[100vh] flex-col space-y-6 pb-6">
+      <div className="mb-[50px] flex h-[100vh] flex-col space-y-6 pb-6">
         <div className="mx-6 border-b-2 border-b-sky-300 pb-2 shadow-sky-300/20">
           <h2 id="projects" className="text-3xl drop-shadow-2xl">
             Projects
           </h2>
         </div>
         <p className="mx-10 text-neutral-400">Built from scratch</p>
-        <div className="my-4 flex items-center justify-around space-y-4">
+        <div className="my-4 flex items-center justify-around space-x-4">
           <ProjectCard
             href="https://plums-ioo918mj7-papa-yaw-agyeman-manus-projects.vercel.app/"
             image_url="https://utfs.io/f/e6c3e84d-8601-4aa6-bf9b-e33a27a8a8f3-a2l1v9.png"
@@ -95,11 +95,9 @@ export default function Home() {
             title="Wedding Website"
             description="A website I built for my wedding to collect guest information and give information about the wedding"
           />
-          <SkeletonCard />
-          <SkeletonCard />
         </div>
         <p className="mx-10 text-neutral-400">Clones</p>
-        <div className="my-4 flex items-center justify-around space-y-4">
+        <div className="my-4 flex items-center justify-around space-x-4">
           <ProjectCard
             href="https://spotify-clone-90q4tfeni-papa-yaw-agyeman-manus-projects.vercel.app/"
             image_url="https://utfs.io/f/3dac2974-a161-4701-8e66-dac99c86a828-mp28yr.png"
@@ -112,11 +110,9 @@ export default function Home() {
             title="LMS Clone"
             description="Learning Management system clone from Code with Antonio"
           />
-          <SkeletonCard />
-          <SkeletonCard />
         </div>
-        <div className="mx-12 my-12 flex justify-evenly space-x-12">
-          <div className="flex h-[500px] w-[50%] flex-col">
+        <div className="flex flex-col items-center justify-center md:mx-12 md:my-12 md:flex-row md:justify-evenly md:space-x-12">
+          <div className="flex h-[500px] w-full flex-col md:w-[50%]">
             <h2 id="experience" className="justify-start text-2xl">
               Work Experience
             </h2>
@@ -139,7 +135,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex h-[500px] w-[50%] flex-col">
+          <div className="flex h-[500px] w-full flex-col md:w-[50%]">
             <h2 id="stacks" className="justify-start text-2xl">
               Stacks and Techs
             </h2>
@@ -148,11 +144,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mx-6 my-10">
-          <div className="my-10 border-b-2 border-b-sky-300 pb-2">
+        <div className="my-10 px-2 md:mx-6">
+          <div className="my-10 w-full border-b-2 border-b-sky-300 pb-2">
             <h2 className="text-3xl drop-shadow-2xl">Recommendations</h2>
           </div>
-          <div className="m-auto grid max-w-[90%] grid-cols-3 gap-4">
+          <div className="m-auto flex flex-col gap-4 md:grid md:max-w-[90%] md:grid-cols-3">
             <RecommendationCard
               image_url="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
               recommender_name="Papa Yaw Agyeman-Manu"
@@ -199,10 +195,8 @@ export default function Home() {
         </div>
       </div>
       {/* To do 
-      fill in work experiences and wait for inspiration 
-      on hover for navigation links
-      Open to hire  component
-      build page links either on page or on another*/}
+      build contact me page 
+      finish mobile view*/}
     </Fragment>
   );
 }

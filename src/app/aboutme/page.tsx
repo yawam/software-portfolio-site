@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <Fragment>
       <div className="my-16 flex h-[100vh] w-full items-center justify-center">
-        <div className="flex w-[40%] flex-col items-center justify-center space-y-4">
+        <div className="flex w-full flex-col items-center justify-center space-y-4 md:w-[40%]">
           <div className="relative h-[300px] w-[300px]">
             <Image
               src="https://utfs.io/f/b35332ed-4c66-4ced-9121-6a4d65fa729a-o9sf04...jpg"
@@ -33,7 +33,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="mx-10 space-y-8">
+      <div className="space-y-8 md:mx-10">
         <div>
           <h2 className="text-4xl text-neutral-300">
             Now let&apos;s get to the fun part. My Hobbies!
@@ -42,7 +42,7 @@ export default function AboutMe() {
             Here&apos;s the stuff I like to do. Do we have anything in common?
           </p>
         </div>
-        <div className="flex w-full items-center justify-around">
+        <div className="flex w-full items-center justify-around space-x-4 overflow-x-auto p-2">
           <HobbyCard
             title="Coding"
             image_url="https://utfs.io/f/59dfa694-8fe7-448a-bebd-1005017e7d0f-ic6t1x.jpeg"
@@ -60,8 +60,8 @@ export default function AboutMe() {
             image_url="https://utfs.io/f/b3dcd1ea-a521-4628-8f89-061bc7a58926-1t4w9r.jpg"
           />
         </div>
-        <div className="mb-2 flex w-full items-center justify-around space-x-8">
-          <div className="h-[400px] w-[50%]">
+        <div className="mb-2 flex w-full flex-col items-center justify-around space-y-8 md:flex-row md:space-x-8">
+          <div className="h-[400px] w-full md:w-[50%]">
             What music does Papa Yaw listen to
             <div className="flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
               <iframe
@@ -72,7 +72,7 @@ export default function AboutMe() {
               ></iframe>
             </div>
           </div>
-          <div className="h-[400px] w-[50%]">
+          <div className="h-[400px] w-full md:w-[50%]">
             His Favorite Video Game
             <div className="group relative flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
               <Image

@@ -14,7 +14,7 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <div className="group flex h-[280px] w-[320px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-neutral-900/50 shadow-2xl transition-all hover:-translate-y-2 hover:shadow-sky-300/20">
+    <div className="group flex h-[280px] w-[50%] flex-col items-center justify-center overflow-hidden rounded-2xl bg-neutral-900/50 shadow-2xl transition-all hover:-translate-y-2 hover:shadow-sky-300/20 md:w-[320px]">
       <Link href={href} className="relative h-[80%] w-full overflow-hidden">
         <Image
           src={image_url}
