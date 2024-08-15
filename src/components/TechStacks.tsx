@@ -43,18 +43,22 @@ const stacks = [
   },
 ];
 export default function TechStacks() {
-  return stacks.map((stack, key) => (
-    <div
-      key={key}
-      className="relative h-[150px] w-[150px] flex-shrink-0 overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
-    >
-      <Image
-        alt={stack.alt}
-        src={stack.src}
-        fill
-        style={{ objectFit: "contain" }}
-        className="py-2"
-      />
+  return (
+    <div className="flex h-[500px] w-full flex-wrap justify-center gap-4 overflow-y-auto rounded-2xl bg-neutral-900/50 p-2 shadow-2xl">
+      {stacks.map((stack, key) => (
+        <div
+          key={key}
+          className="relative h-[100px] w-[150px] flex-shrink-0 overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
+        >
+          <Image
+            alt={stack.alt}
+            src={stack.src}
+            fill
+            style={{ objectFit: "contain" }}
+            className="py-2"
+          />
+        </div>
+      ))}
     </div>
-  ));
+  );
 }

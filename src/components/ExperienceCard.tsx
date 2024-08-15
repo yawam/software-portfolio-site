@@ -29,7 +29,7 @@ export default function ExperienceCard({
         />
       </Link>
 
-      <div>
+      <div className="h-[20%] w-full p-2">
         <p>{title}</p>
         <p>
           {start_date} - {end_date}

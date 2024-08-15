@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 shadow-2xl">
+        <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 pb-16 shadow-2xl">
           <div className="flex w-full justify-center">
             <Navbar />
           </div>

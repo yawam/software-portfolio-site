@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mb-[50px] flex h-[100vh] flex-col space-y-6 pb-6">
+      <div className="mb-[80px] flex h-[100vh] flex-col space-y-6 pb-16">
         <div className="mx-6 border-b-2 border-b-sky-300 pb-2 shadow-sky-300/20">
           <h2 id="projects" className="text-3xl drop-shadow-2xl">
             Projects
@@ -139,9 +139,7 @@ export default function Home() {
             <h2 id="stacks" className="justify-start text-2xl">
               Stacks and Techs
             </h2>
-            <div className="grid h-[500px] w-full grid-cols-3 grid-rows-3 gap-4 overflow-y-auto rounded-2xl bg-neutral-900/50 p-2 shadow-2xl">
-              <TechStacks />
-            </div>
+            <TechStacks />
           </div>
         </div>
         <div className="my-10 px-2 md:mx-6">
@@ -161,7 +159,7 @@ export default function Home() {
       {/* To do 
       build contact me page 
       finish mobile view for contact me
-      fix tech stacks CSS and add in recommendations*/}
+      */}
     </Fragment>
   );
 }
