@@ -43,7 +43,7 @@ export default function Home() {
                     className="animate-bounce text-white drop-shadow-2xl"
                   />
                 </a>
-                <span className="absolute right-[6rem] z-50 hidden w-[100px] rounded bg-sky-700 px-2 py-1 text-xs text-white group-hover:flex">
+                <span className="absolute bottom-[6rem] z-50 hidden w-[100px] rounded bg-sky-700 px-2 py-1 text-xs text-white group-hover:flex">
                   Click to download resume
                 </span>
               </div>
@@ -142,16 +142,25 @@ export default function Home() {
             <TechStacks />
           </div>
         </div>
-        <div className="my-10 px-2 md:mx-6">
+        <div className="my-10 px-2 md:mx-2">
           <div className="my-10 w-full border-b-2 border-b-sky-300 pb-2">
             <h2 className="text-3xl drop-shadow-2xl">Recommendations</h2>
           </div>
-          <div className="m-auto flex flex-col gap-4 md:grid md:max-w-[90%] md:grid-cols-3">
+          <div className="flex flex-col gap-4 md:grid md:max-w-full md:grid-cols-3 md:space-x-4">
             <RecommendationCard
               image_url="https://utfs.io/f/a0eeddae-40b1-44e8-88fd-cb6d08b7a4b8-mym5hl.jpeg"
               recommender_name="Freda Agyeman-Manu"
               recommender_title="Wife"
               recommendation="Papa Yaw demonstrated remarkable dedication in building our wedding website. He took our vision and brought it to life with a perfect blend of creativity and technical skill. The website not only functioned seamlessly but also helped us cut costs and efficiently relay important information to our guests. His hard work was evident in every detail, from the sleek design to the user-friendly interface. Papayaw’s ability to tackle challenges and deliver an exceptional final product truly sets him apart. I wholeheartedly recommend him."
+            />
+            <RecommendationCard
+              image_url="https://utfs.io/f/7dF6fxvLS6wZ09n75USXqOiahMfzCpxbw1QBgN2dY7mVrs0l"
+              recommender_name="Gerald Pierce"
+              recommender_title="Adjunct Instructor BYU-Idaho"
+              recommendation="To whom I concern I have known Papa Yaw Agyeman-Manu and he has worked with me for two semesters as my teachers assistant. 
+He was always polite and professional to myself and to the students he brought a level of expertise that was very helpful to the students and he was willing to follow council and show flexibility with his duties as my teaching assistant.
+His knowledge of front end web development Made it so he could easily help the students in our classes as they asked him questions.
+I would love to have him again as my teacher's assistant"
             />
           </div>
         </div>
