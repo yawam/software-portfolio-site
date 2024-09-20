@@ -11,8 +11,8 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 h-16 w-full bg-sky-950 shadow-2xl md:relative md:top-0 md:w-[50%] md:rounded-b-xl md:border md:border-cyan-100">
-      <ul className="flex h-full items-center justify-around">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 h-16 w-full bg-sky-950/95 shadow-2xl md:relative md:top-0 md:w-[50%] md:rounded-b-xl md:border md:border-cyan-100">
+      <ul className="flex h-full items-center justify-evenly">
         <li className="md:hidden">
           <Link href="/">
             <FaHome className="text-2xl text-white" />

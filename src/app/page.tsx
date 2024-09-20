@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mb-[80px] flex h-[100vh] flex-col space-y-6 pb-16">
+      <div className="mb-16 flex flex-col space-y-6">
         <div className="mx-6 border-b-2 border-b-sky-300 pb-2 shadow-sky-300/20">
           <h2 id="projects" className="text-3xl drop-shadow-2xl">
             Projects
