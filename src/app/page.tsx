@@ -90,7 +90,7 @@ export default function Home() {
             description="A personal learning Management software that I created with Next.js, React, and Tailwind CSS"
           />
           <ProjectCard
-            href=""
+            href="https://www.freda-papayaw.me/"
             image_url="https://utfs.io/f/f0469d7c-1504-41e4-be77-304fffc37bfb-5qlfk6.png"
             title="Wedding Website"
             description="A website I built for my wedding to collect guest information and give information about the wedding"
@@ -166,8 +166,8 @@ I would love to have him again as my teacher's assistant"
         </div>
       </div>
       {/* To do 
-      build contact me page 
-      finish mobile view for contact me
+      add in a backend
+      componentize this page. 
       */}
     </Fragment>
   );
