@@ -15,7 +15,7 @@ export default async function ProjectsSection() {
         </h2>
       </div>
       <p className="mx-6 text-neutral-400 md:mx-10">Built from scratch</p>
-      <div className="my-4 flex items-center justify-around space-x-4">
+      <div className="my-4 flex items-center justify-around space-x-4 overflow-x-scroll">
         {projects.map((project) => (
           <Link key={project.id} href={`/projects/${project.id}`}>
             <ProjectCard
@@ -30,7 +30,7 @@ export default async function ProjectsSection() {
       <p className="mx-6 text-neutral-400 md:mx-10">
         Clones (Proof-of-concept)
       </p>
-      <div className="my-4 flex items-center justify-around space-x-4">
+      <div className="my-4 flex items-center justify-around space-x-4 overflow-x-scroll">
         {clones.map((clone) => (
           <Link key={clone.id} href={`/clones/${clone.id}`}>
             <ProjectCard

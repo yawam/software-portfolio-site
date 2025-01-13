@@ -1,6 +1,30 @@
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+let prisma: PrismaClient;
+
+if (process.env.NODE_ENV === "production") {
+  // Use a new instance in production
+  prisma = new PrismaClient();
+} else {
+  // Use a global instance in development to prevent multiple instances
+  if (!(global as any).prisma) {
+    (global as any).prisma = new PrismaClient();
+  }
+  prisma = (global as any).prisma;
+}
+
+// Cleanup connections on process termination
+process.on("SIGINT", async () => {
+  console.log("SIGINT received: Disconnecting Prisma...");
+  await prisma.$disconnect();
+  process.exit(0);
+});
+
+process.on("SIGTERM", async () => {
+  console.log("SIGTERM received: Disconnecting Prisma...");
+  await prisma.$disconnect();
+  process.exit(0);
+});
 
 export async function getProjects() {
   try {
