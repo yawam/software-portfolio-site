@@ -15,7 +15,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="group flex h-[280px] w-[50%] flex-col items-center justify-center overflow-hidden rounded-2xl bg-neutral-900/50 shadow-2xl transition-all hover:-translate-y-2 hover:shadow-sky-300/20 md:w-[320px]">
-      <Link href={href} className="relative h-[80%] w-full overflow-hidden">
+      <div className="relative h-[80%] w-full overflow-hidden">
         <Image
           src={image_url}
           alt={title}
@@ -23,7 +23,7 @@ export default function ProjectCard({
           style={{ objectFit: "cover" }}
           className="h-full rounded-t-xl transition-all group-hover:scale-110"
         />
-      </Link>
+      </div>
       <div className="flex w-full flex-col justify-start space-y-2 p-2">
         <p className="text-lg">{title}</p>
         <p className="truncate text-sm">{description}</p>

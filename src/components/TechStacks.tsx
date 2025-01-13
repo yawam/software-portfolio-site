@@ -41,24 +41,42 @@ const stacks = [
     src: "https://utfs.io/f/852c8410-5819-4e5f-b855-751cbf4fbe17-qn2wzh.png",
     alt: "C# Logo",
   },
+
+  {
+    src: "https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZDZskqVlbd1KlyvE9xsSm0GQYiwfpugVjJcoe",
+    alt: "CSS Logo",
+  },
+  {
+    src: "https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZGlUUqqZbXma3zwk7UgON4qDFE0PeMdK9B15J",
+    alt: "HTML Logo",
+  },
+  {
+    src: "https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZaDAPAG1HSiQM8fmWC1Ao0eglLJH2u6DsEIBO",
+    alt: "Javascript Logo",
+  },
 ];
 export default function TechStacks() {
   return (
-    <div className="flex h-[500px] w-full flex-wrap justify-center gap-4 overflow-y-auto rounded-2xl bg-neutral-900/50 p-2 shadow-2xl">
-      {stacks.map((stack, key) => (
-        <div
-          key={key}
-          className="relative h-[100px] w-[150px] flex-shrink-0 overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
-        >
-          <Image
-            alt={stack.alt}
-            src={stack.src}
-            fill
-            style={{ objectFit: "contain" }}
-            className="py-2"
-          />
-        </div>
-      ))}
+    <div className="flex h-[500px] w-full flex-col md:w-[50%]">
+      <h2 id="stacks" className="justify-start text-2xl">
+        Stacks and Techs
+      </h2>
+      <div className="flex h-[500px] w-full flex-wrap justify-center gap-4 overflow-y-auto rounded-2xl bg-neutral-900/50 p-2 shadow-2xl">
+        {stacks.map((stack, key) => (
+          <div
+            key={key}
+            className="relative h-[100px] w-[150px] flex-shrink-0 overflow-hidden rounded-xl bg-neutral-900/20 py-4 shadow-2xl"
+          >
+            <Image
+              alt={stack.alt}
+              src={stack.src}
+              fill
+              style={{ objectFit: "contain" }}
+              className="py-2"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,14 +1,12 @@
-import ExperienceCard from "@/components/ExperienceCard";
-import Navbar from "@/components/navbar";
-import ProjectCard from "@/components/ProjectCard";
-import { SkeletonCard } from "@/components/skeletonCard";
 import Image from "next/image";
 import Link from "next/link";
 import { BsDownload } from "react-icons/bs";
 import OpenToHire from "@/components/OpenToHire";
 import TechStacks from "@/components/TechStacks";
 import { Fragment } from "react";
-import RecommendationCard from "@/components/RecommendationCard";
+import ProjectsSection from "@/components/ProjectsSection";
+import Experience from "@/components/Experience";
+import RecommendationsSection from "@/components/RecommendationsSection";
 
 export default function Home() {
   return (
@@ -76,99 +74,14 @@ export default function Home() {
         </div>
       </div>
       <div className="mb-16 flex flex-col space-y-6">
-        <div className="mx-6 border-b-2 border-b-sky-300 pb-2 shadow-sky-300/20">
-          <h2 id="projects" className="text-3xl drop-shadow-2xl">
-            Projects
-          </h2>
-        </div>
-        <p className="mx-6 text-neutral-400 md:mx-10">Built from scratch</p>
-        <div className="my-4 flex items-center justify-around space-x-4">
-          <ProjectCard
-            href="https://plums-ioo918mj7-papa-yaw-agyeman-manus-projects.vercel.app/"
-            image_url="https://utfs.io/f/e6c3e84d-8601-4aa6-bf9b-e33a27a8a8f3-a2l1v9.png"
-            title="PLUMS"
-            description="A personal learning Management software that I created with Next.js, React, and Tailwind CSS"
-          />
-          <ProjectCard
-            href="https://www.freda-papayaw.me/"
-            image_url="https://utfs.io/f/f0469d7c-1504-41e4-be77-304fffc37bfb-5qlfk6.png"
-            title="Wedding Website"
-            description="A website I built for my wedding to collect guest information and give information about the wedding"
-          />
-        </div>
-        <p className="mx-6 text-neutral-400 md:mx-10">Clones</p>
-        <div className="my-4 flex items-center justify-around space-x-4">
-          <ProjectCard
-            href="https://spotify-clone-90q4tfeni-papa-yaw-agyeman-manus-projects.vercel.app/"
-            image_url="https://utfs.io/f/3dac2974-a161-4701-8e66-dac99c86a828-mp28yr.png"
-            title="Spotify Clone"
-            description="Music player platform clone from Code with Antonio"
-          />
-          <ProjectCard
-            href=""
-            image_url="https://utfs.io/f/f3d79570-72fb-4dcd-8c7c-453510fc9c17-q2hon4.png"
-            title="LMS Clone"
-            description="Learning Management system clone from Code with Antonio"
-          />
-        </div>
+        <ProjectsSection />
         <div className="flex flex-col items-center justify-center md:mx-12 md:my-12 md:flex-row md:justify-evenly md:space-x-12">
-          <div className="flex h-[500px] w-full flex-col md:w-[50%]">
-            <h2 id="experience" className="justify-start text-2xl">
-              Work Experience
-            </h2>
-            <div className="flex h-full w-full items-center justify-around space-x-4 overflow-y-auto rounded-2xl bg-neutral-900/20 p-4 text-center shadow-2xl">
-              <ExperienceCard
-                href=""
-                image_url="https://utfs.io/f/fff40f2c-fc20-4c89-94fb-a4192e7512f7-ibec8w.webp"
-                title="Online Teaching Assistant - Web Frontend Development"
-                start_date="January 2024"
-                end_date="Present"
-                bgColor="white"
-              />
-              <ExperienceCard
-                href=""
-                image_url="https://utfs.io/f/f0276cc0-1b38-4db6-a2f5-98f651e0e4c3-bhjdtr.png"
-                title="Software Developer Intern"
-                start_date="July 2023"
-                end_date="December 2023"
-                bgColor="white"
-              />
-            </div>
-          </div>
-          <div className="flex h-[500px] w-full flex-col md:w-[50%]">
-            <h2 id="stacks" className="justify-start text-2xl">
-              Stacks and Techs
-            </h2>
-            <TechStacks />
-          </div>
-        </div>
-        <div className="my-10 px-2 md:mx-2">
-          <div className="my-10 w-full border-b-2 border-b-sky-300 pb-2">
-            <h2 className="text-3xl drop-shadow-2xl">Recommendations</h2>
-          </div>
-          <div className="flex flex-col gap-4 md:grid md:max-w-full md:grid-cols-3 md:space-x-4">
-            <RecommendationCard
-              image_url="https://utfs.io/f/a0eeddae-40b1-44e8-88fd-cb6d08b7a4b8-mym5hl.jpeg"
-              recommender_name="Freda Agyeman-Manu"
-              recommender_title="Wife"
-              recommendation="Papa Yaw demonstrated remarkable dedication in building our wedding website. He took our vision and brought it to life with a perfect blend of creativity and technical skill. The website not only functioned seamlessly but also helped us cut costs and efficiently relay important information to our guests. His hard work was evident in every detail, from the sleek design to the user-friendly interface. Papayaw’s ability to tackle challenges and deliver an exceptional final product truly sets him apart. I wholeheartedly recommend him."
-            />
-            <RecommendationCard
-              image_url="https://utfs.io/f/7dF6fxvLS6wZ09n75USXqOiahMfzCpxbw1QBgN2dY7mVrs0l"
-              recommender_name="Gerald Pierce"
-              recommender_title="Adjunct Instructor BYU-Idaho"
-              recommendation="To whom I concern I have known Papa Yaw Agyeman-Manu and he has worked with me for two semesters as my teachers assistant. 
-He was always polite and professional to myself and to the students he brought a level of expertise that was very helpful to the students and he was willing to follow council and show flexibility with his duties as my teaching assistant.
-His knowledge of front end web development Made it so he could easily help the students in our classes as they asked him questions.
-I would love to have him again as my teacher's assistant"
-            />
-          </div>
+          <Experience />
+          <TechStacks />
         </div>
       </div>
-      {/* To do 
-      add in a backend
-      componentize this page. 
-      */}
+      <RecommendationsSection />
+      {/* To do add in a backend componentize this page. */}
     </Fragment>
   );
 }
