@@ -2,14 +2,32 @@ import { getClonebyId } from "@/lib/dbCalls";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function ProjectPage({
+export default async function ClonePage({
   params,
 }: {
   params: { cloneId: string };
 }) {
   const cloneId = parseInt(params.cloneId, 10);
 
+  // Handle invalid cloneId (e.g., not a number)
+  if (isNaN(cloneId)) {
+    return (
+      <div className="mt-[50px] flex w-full flex-col items-center justify-center">
+        <h1 className="text-3xl">Invalid Clone ID</h1>
+      </div>
+    );
+  }
+
   const clone = await getClonebyId(cloneId);
+
+  // Handle case where no clone is found
+  if (!clone) {
+    return (
+      <div className="mt-[50px] flex w-full flex-col items-center justify-center">
+        <h1 className="text-3xl">Clone Not Found</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="mt-[50px] flex w-full flex-col items-center justify-center md:h-[70vh]">
