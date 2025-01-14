@@ -18,7 +18,13 @@ export default async function ClonePage({
     );
   }
 
-  const clone = await getClonebyId(cloneId);
+  let clone = null;
+
+  try {
+    clone = await getClonebyId(cloneId);
+  } catch (error) {
+    console.error("Error fetching clone:", error);
+  }
 
   // Handle case where no clone is found
   if (!clone) {
