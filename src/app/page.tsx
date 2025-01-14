@@ -31,7 +31,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="group relative z-0 flex h-[100px] w-[100px] flex-col items-center justify-center rounded-full bg-red-300 transition-all hover:-translate-y-2 hover:scale-110 hover:bg-red-400">
                 <a
-                  href="Resume8-14-2024.pdf"
+                  href="Resume8-22-2024.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-red-700 group-hover:bg-red-800"
