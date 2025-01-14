@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -20,27 +14,25 @@ model Admin {
 }
 
 model Recommendation {
-  id            Int     @id @default(autoincrement())
-  image_url     String?
-  recommender_name String?
+  id                Int     @id @default(autoincrement())
+  image_url         String?
+  recommender_name  String?
   recommender_title String?
-  recommendation String?
-
+  recommendation    String?
 }
 
 model Project {
-  id            Int     @id @default(autoincrement())
-  project_url   String?
-  image_url     String?
-  project_title String?
+  id                  Int     @id @default(autoincrement())
+  project_url         String?
+  image_url           String?
+  project_title       String?
   project_Description String?
-
 }
 
 model Clone {
-  id            Int     @id @default(autoincrement())
-  clone_url     String?
-  image_url     String?
-  clone_title String?
+  id                Int     @id @default(autoincrement())
+  clone_url         String?
+  image_url         String?
+  clone_title       String?
   clone_Description String?
 }
