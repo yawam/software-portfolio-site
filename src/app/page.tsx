@@ -18,7 +18,7 @@ export default function Home() {
           </h1>
           <div className="space-y-4 text-lg">
             <p className="tracking-[.7em] text-neutral-300 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
-              Full Stack Software Developer
+              Full Stack Software Engineer
             </p>
             <p className="tracking-[.5em] text-neutral-300 drop-shadow-2xl">
               Papa Yaw Agyeman-Manu
