@@ -27,6 +27,7 @@ model Project {
   image_url           String?
   project_title       String?
   project_Description String?
+  video_url           String?
 }
 
 model Clone {
@@ -35,4 +36,5 @@ model Clone {
   image_url         String?
   clone_title       String?
   clone_Description String?
+  video_url         String?
 }

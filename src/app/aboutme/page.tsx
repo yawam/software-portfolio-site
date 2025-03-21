@@ -52,6 +52,10 @@ export default function AboutMe() {
             image_url="https://utfs.io/f/5680b720-f446-4aa9-9d9d-997ff3aa2d20-cvnd4w.webp"
           />
           <HobbyCard
+            title="Video Games"
+            image_url="https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZntti7Xps3lE9YzjGoRuW1BpF2hJ4my7DIVHQ"
+          />
+          <HobbyCard
             title="The Organ"
             image_url="https://utfs.io/f/34c1d99d-d830-4b16-94d8-d19577cd680f-fzlfz1.jpg"
           />
