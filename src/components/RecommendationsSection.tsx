@@ -3,7 +3,7 @@ import RecommendationCard from "./RecommendationCard";
 import AddRecommendationButton from "./AddRecommendationButton";
 
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/authOptions";
 import { isAdmin } from "@/lib/dbCalls";
 
 export default async function RecommendationsSection() {
