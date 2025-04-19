@@ -67,7 +67,9 @@ export async function getClonebyId(id: number) {
 
 export async function getRecommendations() {
   try {
-    const recommendations = await prisma.recommendation.findMany();
+    const recommendations = await prisma.recommendation.findMany({
+      where: { isApproved: true },
+    });
     return recommendations;
   } catch (error) {
     console.error("Error fetching recommendations:", error);
@@ -75,12 +77,13 @@ export async function getRecommendations() {
   }
 }
 
-export async function getAdminData() {
-  try {
-    const adminData = await prisma.admin.findMany();
-    return adminData;
-  } catch (error) {
-    console.error("Error fetching admin data:", error);
-    return [];
-  }
+export async function isAdmin(email: string | undefined | null) {
+  console.log("Email in isAdmin:", email);
+  if (!email) return false;
+
+  const admin = await prisma.admin.findUnique({
+    where: { email },
+  });
+
+  return !!admin;
 }

@@ -36,7 +36,7 @@ export default async function ClonePage({
   }
 
   return (
-    <>
+    <div className="space-y-16">
       <div className="mt-[50px] flex w-full flex-col items-center justify-center md:h-[70vh]">
         <div className="mt-4 w-[95%]">
           <Link href={clone?.clone_url ?? ""}>
@@ -52,7 +52,7 @@ export default async function ClonePage({
               alt={clone?.clone_title ?? ""}
               fill
               style={{ objectFit: "cover" }}
-              className="h-full rounded-t-xl"
+              className="h-full rounded-l-xl"
             />
           </div>
           <div className="flex w-full flex-col space-y-4 p-4 md:w-[50%]">
@@ -94,6 +94,6 @@ export default async function ClonePage({
           ></iframe>
         </div>
       )}
-    </>
+    </div>
   );
 }

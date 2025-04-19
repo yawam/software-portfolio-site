@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <Fragment>
       <div className="flex h-[100vh] w-full flex-col items-center justify-center">
-        <div className="space-y-4 rounded-2xl border-sky-200 p-2 text-center shadow-2xl shadow-sky-300/20 md:p-16">
+        <div className="space-y-4 p-2 text-center md:p-16">
           <h1 className="text-[2rem] text-white drop-shadow-2xl md:text-[6rem]">
             Software Portfolio
           </h1>
           <div className="space-y-4 text-lg">
-            <p className="tracking-[.7em] text-neutral-300 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+            <p className="drop-shads0_35px_35px_rgba(0,0,0,0.25)] tracking-[.7em] text-neutral-300">
               Full Stack Software Engineer
             </p>
             <p className="tracking-[.5em] text-neutral-300 drop-shadow-2xl">

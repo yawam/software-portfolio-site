@@ -19,6 +19,7 @@ model Recommendation {
   recommender_name  String?
   recommender_title String?
   recommendation    String?
+  isApproved        Boolean @default(false)
 }
 
 model Project {

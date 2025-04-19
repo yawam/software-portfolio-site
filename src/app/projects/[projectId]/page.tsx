@@ -12,7 +12,7 @@ export default async function ProjectPage({
   const project = await getProjectbyId(projectId);
 
   return (
-    <>
+    <div className="space-y-16">
       <div className="mt-[50px] flex w-full flex-col items-center justify-center md:h-[70vh]">
         <div className="mt-4 w-[95%]">
           <Link href={project?.project_url ?? ""}>
@@ -58,6 +58,6 @@ export default async function ProjectPage({
           ></iframe>
         </div>
       )}
-    </>
+    </div>
   );
 }

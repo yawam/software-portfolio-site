@@ -10,7 +10,7 @@ export default function Experience() {
         <ExperienceCard
           href=""
           image_url="https://utfs.io/f/fff40f2c-fc20-4c89-94fb-a4192e7512f7-ibec8w.webp"
-          title="Online Teaching Assistant - Web Frontend Development"
+          title="Online Teaching Assistant - Web Development(Frontend Backend)"
           start_date="January 2024"
           end_date="Present"
           bgColor="white"
