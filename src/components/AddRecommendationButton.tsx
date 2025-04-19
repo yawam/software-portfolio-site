@@ -157,4 +157,4 @@ export default function AddRecommendationButton() {
     </>
   );
 }
-//  to do next, add admin recommendations panel, add email to user when recommendation is added so they will know their recommendation is pending and also an email to the admin saying an email is pending approval
+//  to do next, fix recommendation section mobile view, add admin recommendations panel, add email to user when recommendation is added so they will know their recommendation is pending and also an email to the admin saying an email is pending approval
