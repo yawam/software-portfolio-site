@@ -12,8 +12,8 @@ export default async function Admin() {
     return (
       <div className="flex h-[100vh] w-full flex-col items-center justify-center">
         <h1>
-          🧤 I'm terribly sorry, but this page is reserved for Master Papa Yaw
-          only. Any further trespass shall be... noted. 📝🕯️🩸
+          🧤 I&apos;m terribly sorry, but this page is reserved for Master Papa
+          Yaw only. Any further trespass shall be... noted. 📝🕯️🩸
         </h1>
       </div>
     );
