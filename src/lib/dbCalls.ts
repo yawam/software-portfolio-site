@@ -65,7 +65,7 @@ export async function getClonebyId(id: number) {
   }
 }
 
-export async function getRecommendations() {
+export async function getApprovedRecommendations() {
   try {
     const recommendations = await prisma.recommendation.findMany({
       where: { isApproved: true },
@@ -73,6 +73,20 @@ export async function getRecommendations() {
     return recommendations;
   } catch (error) {
     console.error("Error fetching recommendations:", error);
+    return [];
+  }
+}
+
+export async function getRecommendationsByApprovalPriority() {
+  try {
+    const recommendations = await prisma.recommendation.findMany({
+      orderBy: {
+        isApproved: "asc", // false (unapproved) comes before true
+      },
+    });
+    return recommendations;
+  } catch (error) {
+    console.error("Error fetching prioritized recommendations:", error);
     return [];
   }
 }

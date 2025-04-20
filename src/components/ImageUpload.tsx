@@ -1,7 +1,7 @@
 // components/ImageUpload.tsx
 "use client";
 
-import { UploadButton } from "@/lib/utils";
+import { UploadButton } from "@/components/uploadthingButtons";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
 import Image from "next/image";
 import { useState } from "react";

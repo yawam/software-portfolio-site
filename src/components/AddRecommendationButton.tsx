@@ -8,6 +8,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Input from "./Input";
 import Textarea from "./Textarea";
+import { Toast } from "react-hot-toast";
 export default function AddRecommendationButton() {
   const [open, setOpen] = useState(false);
   const { data: session, status } = useSession();
@@ -20,10 +21,12 @@ export default function AddRecommendationButton() {
 
   const handleSignIn = () => {
     signIn("google", { callbackUrl: "/#recommendations" });
+    toast.success("signed In successfully");
   };
 
   const handleSignOut = () => {
     signOut({ callbackUrl: "/" });
+    toast.success("signed Out successfully");
   };
 
   const router = useRouter();
@@ -157,4 +160,4 @@ export default function AddRecommendationButton() {
     </>
   );
 }
-//  to do next, fix recommendation section mobile view, add admin recommendations panel, add email to user when recommendation is added so they will know their recommendation is pending and also an email to the admin saying an email is pending approval
+//  to do next, add admin recommendations panel, add email to user when recommendation is added so they will know their recommendation is pending and also an email to the admin saying an email is pending approval
