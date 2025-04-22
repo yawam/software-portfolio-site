@@ -1,7 +1,9 @@
 import AdminRecommendations from "@/components/AdminRecommendations";
+import LoginButton from "@/components/LoginButton";
 import { authOptions } from "@/lib/authOptions";
 import { getRecommendationsByApprovalPriority, isAdmin } from "@/lib/dbCalls";
 import { getServerSession } from "next-auth";
+import { FcGoogle } from "react-icons/fc";
 
 export default async function Admin() {
   const recommendations = await getRecommendationsByApprovalPriority();
@@ -11,10 +13,17 @@ export default async function Admin() {
   if (!adminCheck) {
     return (
       <div className="flex h-[100vh] w-full flex-col items-center justify-center">
-        <h1>
+        <h1 className="text-center text-3xl">
           🧤 I&apos;m terribly sorry, but this page is reserved for Master Papa
           Yaw only. Any further trespass shall be... noted. 📝🕯️🩸
         </h1>
+        <LoginButton />
+        <a
+          href="/"
+          className="mt-4 flex items-center gap-2 rounded bg-white px-4 py-2 text-black shadow hover:bg-gray-200"
+        >
+          Back to home
+        </a>
       </div>
     );
   }
@@ -32,7 +41,7 @@ export default async function Admin() {
             Recommendations
           </h2>
         </div>
-        <p className="text-neutral-300">
+        <p className="p-2 text-neutral-300">
           You have recommendations needing approval
         </p>
         <AdminRecommendations recommendations={recommendations} />

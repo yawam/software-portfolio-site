@@ -1,4 +1,3 @@
-// app/api/recommendation/route.ts
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
@@ -13,6 +12,7 @@ export async function POST(req: Request) {
       recommendation: body.recommendation,
       image_url: body.image_url,
       isApproved: false, // default
+      recommender_email: body.recommender_email,
     },
   });
 

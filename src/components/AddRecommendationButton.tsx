@@ -17,6 +17,7 @@ export default function AddRecommendationButton() {
     recommender_title: "",
     recommendation: "",
     image_url: "",
+    recommender_email: "",
   });
 
   const handleSignIn = () => {
@@ -33,16 +34,22 @@ export default function AddRecommendationButton() {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const payload = {
+      ...formData,
+      recommender_email: session?.user?.email ?? "",
+    };
+
     const res = await fetch("/api/recommendations", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
     });
 
     if (res.ok) {
       toast.success("Recommendation added successfully!");
+      handleRecommendationSentEmail();
       router.refresh();
       setOpen(false);
       setFormData({
@@ -50,9 +57,45 @@ export default function AddRecommendationButton() {
         recommender_title: "",
         recommendation: "",
         image_url: "",
+        recommender_email: "",
       });
     } else {
       toast.error("Failed to add recommendation. Please try again.");
+    }
+  };
+
+  const handleRecommendationSentEmail = async () => {
+    const userEmail = session?.user?.email;
+    const userName = session?.user?.name;
+
+    const emailPayloads = [
+      {
+        to: userEmail,
+        subject: "Your recommendation has been sent.",
+        html: `<h2>Hi ${userName},</h2>
+          <p>Thank you for your recommendation. It has been sent to the admin (Master P.Y) for approval.</p>
+          <p>We will get back to you as soon as the recommendation is approved.</p>
+          <p>Best regards,</p><h2>Admin's AI Assistant</h2>`,
+      },
+      {
+        to: "yawam0902@gmail.com",
+        subject: "📬 New Recommendation Submitted",
+        html: `<h2>Hey Master P.Y,</h2>
+          <p><strong>${userName}</strong> just submitted a new recommendation.</p>
+          <p>Head to the admin panel to approve or review it when you’re ready.</p>
+          <p><a href="https://pyfolio.dev/admin" target="_blank">Go to Admin Panel</a></p>
+          <p>🚀 Your AI Assistant is always on duty.</p>`,
+      },
+    ];
+
+    for (const payload of emailPayloads) {
+      await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
     }
   };
 
@@ -160,4 +203,4 @@ export default function AddRecommendationButton() {
     </>
   );
 }
-//  to do next, add admin recommendations panel, add email to user when recommendation is added so they will know their recommendation is pending and also an email to the admin saying an email is pending approval
+//  to do next, add email to admin on notification of new recommendation to approve. AI assistant for users to learn about master p.y

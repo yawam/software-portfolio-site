@@ -33,14 +33,16 @@ export default async function RecommendationsSection() {
           <AddRecommendationButton />
         </div>
       </div>
-      <div className="grid auto-rows-min grid-cols-1 justify-items-center gap-4 lg:grid-cols-3">
+      <div className="columns-1 gap-4 md:columns-2 lg:columns-3">
         {recommendations.map((recommendation) => (
           <RecommendationCard
             key={recommendation.id}
+            recommendation_id={recommendation.id}
             image_url={recommendation.image_url ?? ""}
             recommender_name={recommendation.recommender_name ?? ""}
             recommender_title={recommendation.recommender_title ?? ""}
             recommendation={recommendation.recommendation ?? ""}
+            recommender_email={recommendation.recommender_email ?? ""}
           />
         ))}
       </div>
