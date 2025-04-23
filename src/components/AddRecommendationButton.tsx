@@ -11,6 +11,7 @@ import Textarea from "./Textarea";
 import { Toast } from "react-hot-toast";
 export default function AddRecommendationButton() {
   const [open, setOpen] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const { data: session, status } = useSession();
   const [formData, setFormData] = useState({
     recommender_name: "",
@@ -49,9 +50,9 @@ export default function AddRecommendationButton() {
 
     if (res.ok) {
       toast.success("Recommendation added successfully!");
+      setOpen(false);
       handleRecommendationSentEmail();
       router.refresh();
-      setOpen(false);
       setFormData({
         recommender_name: "",
         recommender_title: "",
@@ -171,16 +172,28 @@ export default function AddRecommendationButton() {
                     setFormData({ ...formData, recommendation: e.target.value })
                   }
                 />
-                <ImageUpload
-                  onUpload={(url) =>
-                    setFormData({ ...formData, image_url: url })
-                  }
-                />
+                <div>
+                  <p className="text-gray-400">
+                    Upload your finest portrait | Don&apos;t ruin my site
+                  </p>
+                  <p className="mb-2 text-sm text-gray-400">
+                    Image max-size: 4mb
+                  </p>
+                  <ImageUpload
+                    onUpload={(url) =>
+                      setFormData({ ...formData, image_url: url })
+                    }
+                    onUploadStart={() => setIsUploading(true)}
+                    onUploadComplete={() => setIsUploading(false)}
+                  />
+                </div>
+
                 <button
                   type="submit"
                   className="rounded bg-sky-600 px-4 py-2 text-white transition hover:bg-sky-700"
+                  disabled={isUploading}
                 >
-                  Submit
+                  {isUploading ? "Uploading..." : "Submit"}
                 </button>
               </form>
             ) : (
@@ -203,4 +216,4 @@ export default function AddRecommendationButton() {
     </>
   );
 }
-//  to do next, add email to admin on notification of new recommendation to approve. AI assistant for users to learn about master p.y
+//  to do next, add an image to the email sender image icon, create AI assistant for users to learn about master p.y

@@ -8,10 +8,15 @@ import { useState } from "react";
 
 export default function ImageUpload({
   onUpload,
+  onUploadStart,
+  onUploadComplete,
 }: {
   onUpload: (url: string) => void;
+  onUploadStart?: () => void;
+  onUploadComplete?: () => void;
 }) {
   const [preview, setPreview] = useState<string | null>(null);
+
   return (
     <div className="flex flex-col items-center gap-4">
       {/* Preview Image */}
@@ -29,15 +34,20 @@ export default function ImageUpload({
       {/* UploadThing Button */}
       <UploadButton
         endpoint="imageUploader"
+        onUploadBegin={() => {
+          onUploadStart?.();
+        }}
         onClientUploadComplete={(res) => {
           if (res && res[0]) {
             const uploadedUrl = res[0].ufsUrl;
             setPreview(uploadedUrl); // ✅ Show image preview
             onUpload(uploadedUrl); // ✅ Send to parent form
           }
+          onUploadComplete?.();
         }}
         onUploadError={(error: Error) => {
           alert(`Upload failed: ${error.message}`);
+          onUploadComplete?.();
         }}
         appearance={{
           button:
