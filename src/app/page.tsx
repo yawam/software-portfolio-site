@@ -7,6 +7,7 @@ import { Fragment } from "react";
 import ProjectsSection from "@/components/ProjectsSection";
 import Experience from "@/components/Experience";
 import RecommendationsSection from "@/components/RecommendationsSection";
+import LoginButton from "@/components/LoginButton";
 
 export default function Home() {
   return (

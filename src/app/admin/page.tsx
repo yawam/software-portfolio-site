@@ -17,7 +17,7 @@ export default async function Admin() {
           🧤 I&apos;m terribly sorry, but this page is reserved for Master Papa
           Yaw only. Any further trespass shall be... noted. 📝🕯️🩸
         </h1>
-        <LoginButton />
+        <LoginButton text="Continue with Google" />
         <a
           href="/"
           className="mt-4 flex items-center gap-2 rounded bg-white px-4 py-2 text-black shadow hover:bg-gray-200"

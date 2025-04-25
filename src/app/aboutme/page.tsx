@@ -65,8 +65,10 @@ export default function AboutMe() {
           />
         </div>
         <div className="mb-2 flex w-full flex-col items-center justify-around space-y-8 md:flex-row md:space-x-8">
-          <div className="h-[400px] w-full md:w-[50%]">
-            What music does Papa Yaw listen to
+          <div className="flex h-[400px] w-full flex-col md:h-[500px] md:w-[50%]">
+            <p className="mb-2 text-white">
+              What music does Papa Yaw listen to?
+            </p>
             <div className="flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
               <iframe
                 className="h-full w-full rounded-2xl shadow-2xl shadow-sky-300/20"
@@ -76,9 +78,9 @@ export default function AboutMe() {
               ></iframe>
             </div>
           </div>
-          <div className="h-[400px] w-full md:w-[50%]">
-            His Favorite Video Game
-            <div className="group relative flex h-full w-full items-center justify-center rounded-xl bg-neutral-700/20 shadow-2xl">
+          <div className="flex h-[400px] w-full flex-col md:h-[500px] md:w-[50%]">
+            <p className="mb-2 text-white">His Favorite Video Game</p>
+            <div className="group relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl bg-neutral-700/20 shadow-2xl">
               <Image
                 src="https://utfs.io/f/90f834bc-3c4c-47bb-a618-3bb38e3d7123-1xeek8.jpeg"
                 alt="avatar xbox"
@@ -95,7 +97,7 @@ export default function AboutMe() {
               />
               <div className="z-10 hidden h-[100%] w-[100%] items-center justify-center rounded-xl bg-black/70 text-center text-2xl text-white transition-opacity duration-500 ease-in-out group-hover:flex group-hover:opacity-100">
                 <p className="duration-1750 rounded-xl bg-black/80 p-2 opacity-0 shadow-2xl transition-opacity ease-in-out group-hover:opacity-100">
-                  FIFA <br /> <span className="text-sm">Can you beat me?</span>
+                  EAFC <br /> <span className="text-sm">Can you beat me?</span>
                 </p>
               </div>
             </div>
