@@ -8,8 +8,32 @@ import { Toaster } from "react-hot-toast";
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Software Portfolio - Papa Yaw Agyeman-Manu",
-  description: "This is Papa Yaw Agyeman-Manu's SoftwarePortfolio Website",
+  title: "Papa Yaw's Portfolio",
+  description: "Check out Papa Yaw's software portfolio",
+  openGraph: {
+    title: "Papa Yaw's Portfolio",
+    description: "See my projects, recommendations, and favorite things.",
+    url: "https://pyfolio.dev",
+    siteName: "Papa Yaw's Portfolio",
+    images: [
+      {
+        url: "https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZR9T4WWBhwd4XZYF5k7SvuxWrnf1lDVcIPHQi", // replace with your hosted image
+        width: 1200,
+        height: 630,
+        alt: "Papa Yaw's Portfolio Screenshot",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Papa Yaw's Portfolio",
+    description: "Check out my work and get to know me.",
+    images: [
+      "https://axl8uyhwd5.ufs.sh/f/7dF6fxvLS6wZR9T4WWBhwd4XZYF5k7SvuxWrnf1lDVcIPHQi",
+    ], // same or different from OG
+  },
 };
 
 export default function RootLayout({
