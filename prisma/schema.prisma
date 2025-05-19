@@ -30,6 +30,7 @@ model Project {
   project_title       String?
   project_Description String?
   video_url           String?
+  under_construction  Boolean @default(false)
 }
 
 model Clone {
@@ -39,4 +40,5 @@ model Clone {
   clone_title       String?
   clone_Description String?
   video_url         String?
+  under_construction Boolean @default(false)
 }

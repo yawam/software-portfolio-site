@@ -1,3 +1,4 @@
+import VisitSiteButton from "@/components/VisiteSiteButton";
 import { getProjectbyId } from "@/lib/dbCalls";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,11 +16,10 @@ export default async function ProjectPage({
     <div className="space-y-16">
       <div className="mt-[50px] flex w-full flex-col items-center justify-center md:h-[70vh]">
         <div className="mt-4 w-[95%]">
-          <Link href={project?.project_url ?? ""}>
-            <button className="float-right h-16 w-32 rounded bg-sky-950 px-4 py-2 text-lg text-white shadow-xl transition-all hover:scale-105 hover:bg-sky-800">
-              Visit Site
-            </button>
-          </Link>
+          <VisitSiteButton
+            projectUrl={project?.project_url ?? ""}
+            underConstruction={project?.under_construction ?? false}
+          />
         </div>
         <div className="flex h-[700px] w-[95%] flex-col rounded-xl bg-neutral-400/10 shadow-2xl md:mt-[100px] md:h-[500px] md:w-[60%] md:flex-row">
           <div className="relative h-[50%] w-full md:h-[100%] md:w-[50%]">
