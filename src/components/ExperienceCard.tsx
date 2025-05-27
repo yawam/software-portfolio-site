@@ -18,7 +18,7 @@ export default function ExperienceCard({
   bgColor,
 }: ExperienceCardProps) {
   return (
-    <div className="group flex h-[280px] w-[320px] flex-col items-center justify-center overflow-hidden rounded-2xl bg-neutral-900/50 shadow-2xl transition-all hover:-translate-y-2">
+    <div className="group flex h-[280px] w-[320px] flex-shrink-0 flex-col items-center justify-center overflow-hidden rounded-2xl bg-neutral-900/50 shadow-2xl transition-all hover:-translate-y-2">
       <Link href={href} className="relative h-[80%] w-full overflow-hidden">
         <Image
           src={image_url}

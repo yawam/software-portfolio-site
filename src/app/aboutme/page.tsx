@@ -103,9 +103,6 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-
-        {/* Set up Spotify Section
-        Set up Fifa Section */}
       </div>
     </Fragment>
   );
