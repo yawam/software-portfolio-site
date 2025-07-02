@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Input from "./Input";
 import Textarea from "./Textarea";
-import { Toast } from "react-hot-toast";
+
 export default function AddRecommendationButton() {
   const [open, setOpen] = useState(false);
   const [isUploading, setIsUploading] = useState(false);

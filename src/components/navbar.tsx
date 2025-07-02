@@ -8,6 +8,7 @@ import {
   FaUser,
   FaEnvelope,
 } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi2";
 
 export default function Navbar() {
   return (
@@ -33,6 +34,12 @@ export default function Navbar() {
             <FaUser className="text-2xl text-white" />
           </Link>
         </li>
+
+        <li className="md:hidden">
+          <Link href="/aiassistant">
+            <HiSparkles className="text-2xl text-amber-400" />
+          </Link>
+        </li>
         <li className="md:hidden">
           <Link href="/contactme">
             <FaEnvelope className="text-2xl text-white" />
@@ -50,6 +57,12 @@ export default function Navbar() {
         </li>
         <li className="hidden md:inline">
           <Link href="/aboutme">About me</Link>
+        </li>
+        <li className="hidden md:inline">
+          <Link href="/aiassistant" className="flex items-center space-x-1">
+            <HiSparkles className="text-2xl text-amber-400" />
+            AI Assistant
+          </Link>
         </li>
         <li className="hidden md:inline">
           <Link href="/contactme">Contact me</Link>

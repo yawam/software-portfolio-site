@@ -1,3 +1,4 @@
+import ChatInterface from "@/components/ChatInterface";
 import ContactCard from "@/components/contactCard";
 
 export default function ContactMe() {
