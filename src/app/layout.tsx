@@ -9,6 +9,9 @@ const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Papa Yaw's Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description: "Check out Papa Yaw's software portfolio",
   openGraph: {
     title: "Papa Yaw's Portfolio",
