@@ -9,9 +9,6 @@ const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Papa Yaw's Portfolio",
-  icons: {
-    icon: "/favicon.ico",
-  },
   description: "Check out Papa Yaw's software portfolio",
   openGraph: {
     title: "Papa Yaw's Portfolio",
@@ -46,10 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* This forces all browsers to honor it */}
-      </head>
       <body className={font.className}>
         <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 pb-16 shadow-2xl">
           <Toaster />
