@@ -13,7 +13,7 @@ export default function ChatInterface() {
     {
       role: "assistant",
       content:
-        "Hi there! I'm PY's portfolio assistant—ask me anything about him or his work.",
+        "Hi there! I'm PY's portfolio assistant (he hasn't given me a real name yet, maybe you can help!). You can ask me about his work, skills, or how he could be a fit for your team or next project.",
     },
   ]);
   const [input, setInput] = useState("");
