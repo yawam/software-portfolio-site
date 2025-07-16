@@ -70,7 +70,7 @@ export default function AdminRecommendations({
       body: JSON.stringify({
         to: email,
         subject: "Your recommendation has been approved.",
-        html: `<h2>Hi ${name},</h2><p>Thank you for your recommendation once again. It has been approved by the admin(Master P.Y) and he is grateful to your contribution in his professional success. You can now view your recommendation displayed on the portfolio website <a href="https://software-portfolio-site.vercel.app/#recommendations" target="_blank">here</a>.</p><p>Cheers!,</p><h3>Admin's AI Assistant</h3>`,
+        html: `<h2>Hi ${name},</h2><p>Thank you for your recommendation once again. It has been approved by the admin(Master PY) and he is grateful to your contribution in his professional success. You can now view your recommendation displayed on the portfolio website <a href="https://software-portfolio-site.vercel.app/#recommendations" target="_blank">here</a>.</p><p>Cheers!,</p><h3>Admin's AI Assistant</h3>`,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default function AdminRecommendations({
       body: JSON.stringify({
         to: email,
         subject: "Your recommendation has been declined.",
-        html: `<h2>Hi ${name},</h2><p>Thank you for your recommendation. Unfortunately, it has been declined by the admin(Master P.Y). There's probably an error in your recommendation. Master P.Y will reach out to you so we can get things fixed up </p><p>Best regards!</p><h3>Admin's AI Assistant</h3>`,
+        html: `<h2>Hi ${name},</h2><p>Thank you for your recommendation. Unfortunately, it has been declined by the admin(Master PY). There's probably an error in your recommendation. Master PY will reach out to you so we can get things fixed up </p><p>Best regards!</p><h3>Admin's AI Assistant</h3>`,
       }),
       headers: {
         "Content-Type": "application/json",

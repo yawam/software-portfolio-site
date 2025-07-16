@@ -74,14 +74,14 @@ export default function AddRecommendationButton() {
         to: userEmail,
         subject: "Your recommendation has been sent.",
         html: `<h2>Hi ${userName},</h2>
-          <p>Thank you for your recommendation. It has been sent to the admin (Master P.Y) for approval.</p>
+          <p>Thank you for your recommendation. It has been sent to the admin (Master PY) for approval.</p>
           <p>We will get back to you as soon as the recommendation is approved.</p>
           <p>Best regards,</p><h2>Admin's AI Assistant</h2>`,
       },
       {
         to: "yawam0902@gmail.com",
         subject: "📬 New Recommendation Submitted",
-        html: `<h2>Hey Master P.Y,</h2>
+        html: `<h2>Hey Master PY,</h2>
           <p><strong>${userName}</strong> just submitted a new recommendation.</p>
           <p>Head to the admin panel to approve or review it when you’re ready.</p>
           <p><a href="https://pyfolio.dev/admin" target="_blank">Go to Admin Panel</a></p>
@@ -155,7 +155,7 @@ export default function AddRecommendationButton() {
                 <Input
                   id="recommender_title"
                   type="text"
-                  label="Your Job title or professional relation to P.Y"
+                  label="Your Job title or professional relation to PY"
                   value={formData.recommender_title}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setFormData({
@@ -216,4 +216,4 @@ export default function AddRecommendationButton() {
     </>
   );
 }
-//  to do next, add an image to the email sender image icon, create AI assistant for users to learn about master p.y
+//  to do next, add an image to the email sender image icon, create AI assistant for users to learn about master PY

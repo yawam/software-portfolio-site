@@ -58,7 +58,7 @@ export default function AiAssistant() {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center p-4">
       <h1 className="mb-4 text-center text-2xl text-white">
-        Welcome {session.user?.name}, Ask me anything about P.Y and his work
+        Welcome {session.user?.name}, Ask me anything about PY and his work
       </h1>
       <ChatInterface />
       <button

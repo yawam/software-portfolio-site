@@ -48,7 +48,7 @@ export default function RecommendationCard({
       body: JSON.stringify({
         to: recommender_email,
         subject: "Your recommendation has been edited.",
-        html: `<h2>Hi ${recommender_name},</h2><p>Your recommendation has been edited successfully and has been sent to the admin(Master P.Y) for approval. You should receive an email once it has been approved. </p><p>Best regards!</p><h3>Admin's AI Assistant</h3>`,
+        html: `<h2>Hi ${recommender_name},</h2><p>Your recommendation has been edited successfully and has been sent to the admin(Master PY) for approval. You should receive an email once it has been approved. </p><p>Best regards!</p><h3>Admin's AI Assistant</h3>`,
       }),
       headers: {
         "Content-Type": "application/json",
