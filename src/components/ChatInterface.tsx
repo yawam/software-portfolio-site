@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, KeyboardEvent, FormEvent } from "react";
+import ReactMarkdown from "react-markdown";
 
 // Message type for chat
 interface Message {
@@ -93,10 +94,14 @@ export default function ChatInterface() {
             className={`h-auto max-w-[80%] break-words rounded-xl px-3 py-2 text-black shadow-lg ${
               m.role === "user"
                 ? "self-end bg-sky-100 text-right"
-                : "self-start bg-gray-100 text-left"
+                : "prose prose-zinc prose-sm dark:prose-invert self-start bg-gray-100 text-left"
             }`}
           >
-            {m.content}
+            {m.role === "assistant" ? (
+              <ReactMarkdown>{m.content}</ReactMarkdown>
+            ) : (
+              m.content
+            )}
           </div>
         ))}
         <div ref={endRef} />
