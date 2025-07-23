@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 pb-16 shadow-2xl">
+        <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 pb-16 shadow-2xl md:pb-1">
           <Toaster />
           <div className="sticky top-0 z-50 flex w-full justify-center">
             <Navbar />

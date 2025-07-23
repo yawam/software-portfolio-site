@@ -56,17 +56,21 @@ export default function AiAssistant() {
   }
 
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center p-4">
-      <h1 className="mb-4 text-center text-2xl text-white">
-        Welcome {session.user?.name}, Ask me anything about PY and his work
-      </h1>
-      <ChatInterface />
-      <button
-        onClick={handleSignOut}
-        className="mt-4 rounded-xl bg-red-500 px-4 py-2 text-white transition-all hover:bg-red-600"
-      >
-        Logout
-      </button>
+    <div className="flex h-[87vh] w-full p-2 md:mt-[7px] md:space-x-6">
+      <div className="min-h-full w-[20%] rounded-xl bg-neutral-500/30 p-4">
+        still working on this part. we are going to store chats and other
+        features here. AI responses still need more training as well. Logout
+        button works though.
+        <button
+          onClick={handleSignOut}
+          className="mt-4 rounded-xl bg-red-500 px-4 py-2 text-white transition-all hover:bg-red-600"
+        >
+          Logout
+        </button>
+      </div>
+      <div className="flex h-full w-[80%] flex-col items-center justify-center rounded-xl">
+        <ChatInterface username={session.user?.name ?? ""} />
+      </div>
     </div>
   );
 }
