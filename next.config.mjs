@@ -4,6 +4,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "utfs.io" },
       { protocol: "https", hostname: "axl8uyhwd5.ufs.sh" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
   },
 };

@@ -66,6 +66,8 @@ export default function AiAssistant() {
       {/* Sidebar as modal/portal */}
       <Sidebar
         open={sidebarOpen}
+        user_name={session.user?.name ?? ""}
+        user_image={session.user?.image ?? ""}
         onClose={() => setSidebarOpen(false)}
         onLogout={handleSignOut}
       >
