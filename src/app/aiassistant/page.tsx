@@ -5,6 +5,7 @@ import ChatInterface from "@/components/ChatInterface";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { BsLayoutSidebar } from "react-icons/bs";
+import { VscRefresh } from "react-icons/vsc";
 import Sidebar from "@/components/Sidebar";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
@@ -71,8 +72,18 @@ export default function AiAssistant() {
         onClose={() => setSidebarOpen(false)}
         onLogout={handleSignOut}
       >
-        Only admin P.Y has access to stored chats for now. Refresh to start a
-        new chat
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <button
+            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-neutral-700 p-4 shadow-lg transition-all hover:bg-neutral-800"
+            onClick={() => window.location.reload()}
+            aria-label="Refresh chat"
+          >
+            <VscRefresh size={35} className="text-white" />
+            <span className="mt-2 text-lg font-semibold text-white">
+              Refresh the chat
+            </span>
+          </button>
+        </div>
       </Sidebar>
 
       {/* Sidebar open button (always visible when sidebar is closed) */}
