@@ -5,28 +5,15 @@ import ChatInterface from "@/components/ChatInterface";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { BsLayoutSidebar } from "react-icons/bs";
+import Sidebar from "@/components/Sidebar";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function AiAssistant() {
   const { data: session, status } = useSession();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-
-  // Detect mobile view
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Always close sidebar on mobile
-  useEffect(() => {
-    if (isMobile) setSidebarOpen(false);
-  }, [isMobile]);
 
   if (status === "loading")
     return (
@@ -75,44 +62,27 @@ export default function AiAssistant() {
   }
 
   return (
-    <div className="relative flex h-[87vh] w-full p-2 md:mt-[7px] md:space-x-6">
-      {/* Sidebar */}
-      <div
-        className={`fixed left-0 top-0 z-30 flex h-[87vh] flex-col rounded-xl bg-neutral-500/30 p-4 shadow-lg transition-all duration-500 ease-in-out ${sidebarOpen ? "w-[70vw] max-w-xs translate-x-0" : "w-[70vw] max-w-xs -translate-x-[100%]"} md:static md:flex md:w-[20%] md:max-w-none md:translate-x-0`}
-        style={{ minHeight: "calc(87vh - 0.5rem)" }}
+    <div className="relative flex h-[87vh] w-full items-center justify-center p-2 md:mt-[7px] md:w-full">
+      {/* Sidebar as modal/portal */}
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        onLogout={handleSignOut}
       >
-        <div
-          className="flex w-[15%] items-center justify-center rounded-xl px-1 py-2 transition-all hover:scale-105 hover:cursor-pointer hover:bg-neutral-800 hover:shadow-lg"
-          onClick={() => setSidebarOpen((open) => !open)}
-        >
-          <BsLayoutSidebar size={25} />
-        </div>
-        {/* still working on this part. we are going to store chats and other features here. AI responses still need more training as well. Logout button works though. */}
-        <div className="mt-auto flex w-full justify-end">
-          <button
-            onClick={handleSignOut}
-            className="rounded-xl bg-zinc-100 px-4 py-2 text-black transition-all hover:bg-zinc-200"
-          >
-            Logout
-          </button>
-        </div>
-      </div>
+        {/* You can add sidebar content here in the future */}
+      </Sidebar>
 
-      {/* Sidebar open button (shows when sidebar is closed, always visible on mobile) */}
-      {(!sidebarOpen || isMobile) && (
+      {/* Sidebar open button (always visible when sidebar is closed) */}
+      {!sidebarOpen && (
         <button
-          className="fixed left-2 top-4 z-40 flex items-center justify-center rounded-xl bg-neutral-700 p-2 shadow-lg transition-all hover:scale-110 hover:bg-neutral-800 md:hidden"
+          className="fixed left-2 top-4 z-50 flex items-center justify-center rounded-xl bg-neutral-700 p-2 shadow-lg transition-all hover:scale-110 hover:bg-neutral-800"
           onClick={() => setSidebarOpen(true)}
           aria-label="Open sidebar"
         >
           <BsLayoutSidebar size={25} className="text-white" />
         </button>
       )}
-
-      {/* Chat area, width adjusts based on sidebar state and screen size */}
-      <div
-        className={`ml-auto flex h-full flex-col items-center justify-center rounded-xl transition-all duration-500 ease-in-out ${sidebarOpen && !isMobile ? "w-[80%]" : "w-full"}`}
-      >
+      <div className="mx-auto flex h-full w-full flex-col items-center justify-center rounded-xl transition-all duration-500 ease-in-out md:max-w-[80%]">
         <ChatInterface username={session.user?.name ?? ""} />
       </div>
     </div>
