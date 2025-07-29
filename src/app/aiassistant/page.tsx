@@ -74,11 +74,14 @@ export default function AiAssistant() {
       >
         <div className="flex h-full w-full flex-col items-center justify-center">
           <button
-            className="flex flex-col items-center justify-center gap-2 rounded-xl bg-neutral-700 p-4 shadow-lg transition-all hover:bg-neutral-800"
+            className="group flex flex-col items-center justify-center gap-2 rounded-xl bg-neutral-700 p-4 shadow-lg transition-all hover:scale-105 hover:bg-neutral-800"
             onClick={() => window.location.reload()}
             aria-label="Refresh chat"
           >
-            <VscRefresh size={35} className="text-white" />
+            <VscRefresh
+              size={35}
+              className="text-white group-hover:animate-spin"
+            />
             <span className="mt-2 text-lg font-semibold text-white">
               Refresh the chat
             </span>
@@ -89,7 +92,7 @@ export default function AiAssistant() {
       {/* Sidebar open button (always visible when sidebar is closed) */}
       {!sidebarOpen && (
         <button
-          className="fixed left-2 top-4 z-50 flex items-center justify-center rounded-xl bg-neutral-700 p-2 shadow-lg transition-all hover:scale-110 hover:bg-neutral-800"
+          className="fixed left-4 top-24 z-50 flex items-center justify-center rounded-xl bg-neutral-700 p-2 shadow-lg transition-all hover:scale-110 hover:bg-neutral-800"
           onClick={() => setSidebarOpen(true)}
           aria-label="Open sidebar"
         >
