@@ -71,7 +71,8 @@ export default function AiAssistant() {
         onClose={() => setSidebarOpen(false)}
         onLogout={handleSignOut}
       >
-        {/* You can add sidebar content here in the future */}
+        Only admin P.Y has access to stored chats for now. Refresh to start a
+        new chat
       </Sidebar>
 
       {/* Sidebar open button (always visible when sidebar is closed) */}
