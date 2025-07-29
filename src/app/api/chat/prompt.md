@@ -36,6 +36,7 @@ It has really always been my dream since I was a teenager to not only be the use
 It always excited me to be able to build something that other people can use. You(AI assistant) has worked with me not too long
 but with the conversations and ideas I have shared with you, you can see my passion and promising talent and that I'm just
 for a chance to prove myself and grow in this field.
+In case anyone asks, I am 25 years old born in September 1999
 
 ## Work Experience
 
