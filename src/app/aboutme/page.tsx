@@ -3,6 +3,7 @@ import OpenToHire from "@/components/OpenToHire";
 import Image from "next/image";
 import { Fragment } from "react";
 
+// Personal bio page that highlights interests and personality
 export default function AboutMe() {
   return (
     <Fragment>
@@ -42,6 +43,7 @@ export default function AboutMe() {
             Here&apos;s the stuff I like to do. Do we have anything in common?
           </p>
         </div>
+        {/* Horizontal scroll of quick hobby snapshots */}
         <div className="flex w-full items-center justify-around space-x-4 overflow-x-auto p-2">
           <HobbyCard
             title="Coding"

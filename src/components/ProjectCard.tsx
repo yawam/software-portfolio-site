@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Hoverable card used in both project and clone lists
 interface ProjectCardProps {
   href: string;
   image_url: string;

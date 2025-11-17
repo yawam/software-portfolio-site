@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 
 const font = Figtree({ subsets: ["latin"] });
 
+// Global metadata and shell layout used across every route
 export const metadata: Metadata = {
   title: "Papa Yaw's Portfolio",
   description: "Check out Papa Yaw's software portfolio",
@@ -45,10 +46,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <main className="bg-gradient-to-b from-gray-800 via-gray-900 to-black p-2 pb-16 shadow-2xl md:pb-1">
+          {/* Toasts + navigation live at the top of every page */}
           <Toaster />
           <div className="sticky top-0 z-50 flex w-full justify-center">
             <Navbar />
           </div>
+          {/* AuthProvider wraps children so session data is accessible anywhere */}
           <AuthProvider> {children} </AuthProvider>
         </main>
       </body>

@@ -3,6 +3,7 @@
 import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 
+// Reusable Google login CTA used on admin/AI assistant entry points
 interface LoginButtonProps {
   text: string;
 }

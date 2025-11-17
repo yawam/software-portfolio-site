@@ -1,5 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
+// Placeholder card for loading states when project data is pending
 export function SkeletonCard() {
   return (
     <div className="flex flex-col space-y-3">

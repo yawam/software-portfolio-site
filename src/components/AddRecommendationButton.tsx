@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import Input from "./Input";
 import Textarea from "./Textarea";
 
+// Handles the modal flow for submitting recommendations with optional image upload
 export default function AddRecommendationButton() {
   const [open, setOpen] = useState(false);
   const [isUploading, setIsUploading] = useState(false);

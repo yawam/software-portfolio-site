@@ -5,6 +5,7 @@ import { useTransition } from "react";
 import toast, { Toast } from "react-hot-toast";
 import { useSession } from "next-auth/react";
 
+// Admin-only view for approving, declining, or deleting recommendations
 export default function AdminRecommendations({
   recommendations,
 }: {

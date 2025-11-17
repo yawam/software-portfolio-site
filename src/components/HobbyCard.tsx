@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+// Reusable tile for the hobbies strip on the About page
 interface HobbyCardProps {
   title: string;
   image_url: string;

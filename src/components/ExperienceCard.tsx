@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Compact card summarizing each role with logo and dates
 interface ExperienceCardProps {
   href: string;
   image_url: string;
