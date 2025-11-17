@@ -1,6 +1,6 @@
-import ChatInterface from "@/components/ChatInterface";
 import ContactCard from "@/components/contactCard";
 
+// Simple contact landing page that points people to my preferred channel
 export default function ContactMe() {
   return (
     <div className="flex h-[100vh] w-full flex-col items-center justify-center">

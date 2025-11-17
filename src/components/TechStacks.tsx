@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+// Displays logos for primary stacks and additional proficiencies
 const topStacks = [
   {
     src: "https://utfs.io/f/523f15b5-3bd6-4ee2-a20e-c0391cee7592-ruxgie.svg",

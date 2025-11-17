@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
+// Card used in both public feed and admin panel with optional moderation actions
 interface RecommendationCardProps {
   image_url: string;
   recommendation_id: number;

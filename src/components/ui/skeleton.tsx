@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+// Generic shimmering block used to mock content while loading
 function Skeleton({
   className,
   ...props

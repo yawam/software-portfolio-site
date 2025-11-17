@@ -8,6 +8,7 @@ import { isAdmin } from "@/lib/dbCalls";
 import { UserCog } from "lucide-react";
 import Link from "next/link";
 
+// Public recommendations feed with shortcut for admins to moderate
 export default async function RecommendationsSection() {
   const recommendations = await getApprovedRecommendations();
   const session = await getServerSession(authOptions);

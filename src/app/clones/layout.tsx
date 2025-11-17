@@ -3,6 +3,7 @@ export const metadata = {
   description: "Browse and view all clone projects.",
 };
 
+// Minimal layout wrapper so clone routes inherit metadata
 export default function CloneLayout({
   children,
 }: {

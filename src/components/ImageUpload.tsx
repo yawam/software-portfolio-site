@@ -6,6 +6,7 @@ import { OurFileRouter } from "@/app/api/uploadthing/core";
 import Image from "next/image";
 import { useState } from "react";
 
+// Upload helper that provides an instant avatar preview
 export default function ImageUpload({
   onUpload,
   onUploadStart,

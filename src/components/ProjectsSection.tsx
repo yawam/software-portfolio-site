@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import Link from "next/link";
 import { getClones, getProjects } from "@/lib/dbCalls";
 
+// Fetches projects/clones on the server and renders both carousels
 export default async function ProjectsSection() {
   const projects = await getProjects();
   const clones = await getClones();

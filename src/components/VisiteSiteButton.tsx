@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { TriangleAlert } from "lucide-react";
 
+// Visit button that optionally warns when a project site isn't live yet
 interface VisitSiteButtonProps {
   projectUrl: string;
   underConstruction?: boolean;

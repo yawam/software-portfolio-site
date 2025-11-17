@@ -1,6 +1,7 @@
 // components/Textarea.tsx
 import React from "react";
 
+// Styled textarea companion to the floating-label inputs
 interface TextareaProps {
   id: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
