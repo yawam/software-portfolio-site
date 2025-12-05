@@ -104,6 +104,14 @@ const formDataToPayload = (type: ItemType, formData: ProjectFormData) =>
 const getTypeLabel = (type: ItemType) =>
   type === "project" ? "Project" : "Clone";
 
+const getRecordTitle = (
+  type: ItemType,
+  record: ProjectRecord | CloneRecord,
+) =>
+  type === "project"
+    ? (record as ProjectRecord).project_title ?? "Untitled project"
+    : (record as CloneRecord).clone_title ?? "Untitled clone";
+
 export default function AdminProjectsManager({
   projects: initialProjects,
   clones: initialClones,
@@ -605,9 +613,7 @@ export default function AdminProjectsManager({
             <div>
               <h3 className="text-lg font-semibold">
                 Delete &ldquo;
-                {deleteTarget.type === "project"
-                  ? (deleteTarget.record.project_title ?? "Untitled project")
-                  : (deleteTarget.record.clone_title ?? "Untitled clone")}
+                {getRecordTitle(deleteTarget.type, deleteTarget.record)}
                 &rdquo;?
               </h3>
               <p className="text-sm text-red-200">

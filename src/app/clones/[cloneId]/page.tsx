@@ -58,7 +58,7 @@ export default async function ClonePage({
           </div>
           <div className="flex w-full flex-col space-y-4 p-4 md:w-[50%]">
             <h2 className="text-3xl">{clone?.clone_title}</h2>
-            <div className="rounded-xl bg-neutral-900/40 p-4 text-lg">
+            <div className="max-h-[420px] overflow-auto rounded-xl bg-neutral-900/40 p-4 text-lg">
               <RichTextPreview content={clone?.clone_Description ?? ""} />
             </div>
           </div>
