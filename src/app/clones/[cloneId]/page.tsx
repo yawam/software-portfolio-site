@@ -1,4 +1,5 @@
 import VisitSiteButton from "@/components/VisiteSiteButton";
+import RichTextPreview from "@/components/RichTextPreview";
 import { getClonebyId } from "@/lib/dbCalls";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,23 +58,9 @@ export default async function ClonePage({
           </div>
           <div className="flex w-full flex-col space-y-4 p-4 md:w-[50%]">
             <h2 className="text-3xl">{clone?.clone_title}</h2>
-            <p className="text-lg">{clone?.clone_Description}</p>
-            {/* <p>
-              The purpose of the clone was to server as a proof of concept. I
-              spent a lot of time finishing the entire clone. The visit link
-              might however not work because of limited funds to keep my
-              database afloat.
-            </p> */}
-            <p className="text-sm">
-              Credit:
-              <a
-                className="text-lg underline"
-                href="https://www.youtube.com/@codewithantonio"
-                target="_blank"
-              >
-                Antonio Erdeljac
-              </a>
-            </p>
+            <div className="rounded-xl bg-neutral-900/40 p-4 text-lg">
+              <RichTextPreview content={clone?.clone_Description ?? ""} />
+            </div>
           </div>
         </div>
       </div>

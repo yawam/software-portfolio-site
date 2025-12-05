@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import ProjectCard from "./ProjectCard";
 import Link from "next/link";
+import ProjectCard from "./ProjectCard";
 import { getClones, getProjects } from "@/lib/dbCalls";
 
 export default async function ProjectsSection() {

@@ -1,4 +1,5 @@
 import AdminRecommendations from "@/components/AdminRecommendations";
+import AdminProjectsSection from "@/components/AdminProjectsSection";
 import LoginButton from "@/components/LoginButton";
 import { authOptions } from "@/lib/authOptions";
 import { getRecommendationsByApprovalPriority, isAdmin } from "@/lib/dbCalls";
@@ -35,6 +36,7 @@ export default async function Admin() {
           This is the Admin Portal where you can see everything
         </p>
       </div>
+      <AdminProjectsSection />
       <div className="p-10">
         <div className="my-2 flex w-full items-center justify-between border-b-2 border-b-sky-300 pb-2">
           <h2 className="text-xl font-semibold drop-shadow-2xl md:text-3xl md:font-normal">

@@ -4,18 +4,27 @@
 import { UploadButton } from "@/components/uploadthingButtons";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ImageUpload({
   onUpload,
   onUploadStart,
   onUploadComplete,
+  initialImage,
 }: {
   onUpload: (url: string) => void;
   onUploadStart?: () => void;
-  onUploadComplete?: () => void;
+  onUploadComplete?: (status: "success" | "error") => void;
+  initialImage?: string | null;
 }) {
   const [preview, setPreview] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (initialImage) {
+      setPreview(initialImage);
+      onUpload(initialImage);
+    }
+  }, [initialImage, onUpload]);
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -43,11 +52,11 @@ export default function ImageUpload({
             setPreview(uploadedUrl); // ✅ Show image preview
             onUpload(uploadedUrl); // ✅ Send to parent form
           }
-          onUploadComplete?.();
+          onUploadComplete?.("success");
         }}
         onUploadError={(error: Error) => {
           alert(`Upload failed: ${error.message}`);
-          onUploadComplete?.();
+          onUploadComplete?.("error");
         }}
         appearance={{
           button:

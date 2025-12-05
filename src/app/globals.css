@@ -26,3 +26,43 @@
 .animate-slide-in {
   animation: slide-in 0.3s ease-out forwards;
 }
+
+.rich-text-preview .ql-editor {
+  padding: 0;
+  color: inherit;
+  min-height: auto;
+}
+
+.rich-text-preview .ql-editor::before {
+  color: rgba(212, 212, 212, 0.6);
+  font-style: normal;
+}
+
+.rich-text-preview .ql-tooltip {
+  display: none !important;
+}
+
+.ql-toolbar.ql-snow {
+  background-color: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  color: #e5e7eb;
+}
+
+.ql-toolbar.ql-snow .ql-picker {
+  color: inherit;
+}
+
+.ql-container.ql-snow {
+  background-color: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-radius: 0 0 12px 12px;
+  color: #f9fafb;
+  min-height: 180px;
+}
+
+.ql-container.ql-snow .ql-editor {
+  min-height: 180px;
+  color: inherit;
+}

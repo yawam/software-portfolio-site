@@ -1,4 +1,5 @@
 import VisitSiteButton from "@/components/VisiteSiteButton";
+import RichTextPreview from "@/components/RichTextPreview";
 import { getProjectbyId } from "@/lib/dbCalls";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +34,9 @@ export default async function ProjectPage({
           </div>
           <div className="flex w-full flex-col space-y-4 p-4 md:w-[50%]">
             <h2 className="text-3xl">{project?.project_title}</h2>
-            <p className="text-lg">{project?.project_Description}</p>
+            <div className="rounded-xl bg-neutral-900/40 p-4 text-lg">
+              <RichTextPreview content={project?.project_Description ?? ""} />
+            </div>
             <p>Watch Video Presentation below incase the website link fails</p>
             <a href="#presentation-video" className="text-2xl underline">
               Video
