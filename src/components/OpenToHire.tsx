@@ -1,3 +1,4 @@
+// Animated badge to signal availability for new roles
 export default function OpenToHire() {
   return (
     <div className="flex h-[50px] w-[300px] animate-pulse items-center justify-center rounded-full bg-emerald-600/20 shadow-2xl shadow-green-900">

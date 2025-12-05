@@ -3,6 +3,7 @@ import ExperienceCard from "./ExperienceCard";
 import { getProjectbyId } from "@/lib/dbCalls";
 import ProjectCard from "./ProjectCard";
 
+// Section combining a highlighted project with prior roles
 export default async function Experience() {
   const project = await getProjectbyId(2);
   return (

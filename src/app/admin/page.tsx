@@ -6,6 +6,7 @@ import { getRecommendationsByApprovalPriority, isAdmin } from "@/lib/dbCalls";
 import { getServerSession } from "next-auth";
 import { FcGoogle } from "react-icons/fc";
 
+// Admin portal for approving recommendations; access is email-gated
 export default async function Admin() {
   const recommendations = await getRecommendationsByApprovalPriority();
   const session = await getServerSession(authOptions);

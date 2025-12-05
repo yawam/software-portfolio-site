@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { useState } from "react";
 
+// Chat page that protects access behind Google auth and hosts the assistant UI
 export default function AiAssistant() {
   const { data: session, status } = useSession();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -23,10 +24,12 @@ export default function AiAssistant() {
       </div>
     );
 
+  // Trigger Google login flow and bounce back to the assistant
   const handleSignIn = () => {
     signIn("google", { callbackUrl: "/aiassistant" });
     toast.success("Signed in successfully");
   };
+  // Explicit sign-out returns visitors to the homepage
   const handleSignOut = () => {
     signOut({ callbackUrl: "/" });
     toast.success("Signed out successfully");

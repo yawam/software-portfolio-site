@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import RecommendationsSection from "@/components/RecommendationsSection";
 import LoginButton from "@/components/LoginButton";
 
+// Landing page stitches together the main sections of the portfolio
 export default function Home() {
   return (
     <Fragment>
@@ -28,6 +29,7 @@ export default function Home() {
           <div className="flex w-full justify-center">
             <OpenToHire />
           </div>
+          {/* Quick links to download my resume or jump to social profiles */}
           <div className="mt-32 flex items-center justify-around md:justify-center md:space-x-20">
             <div className="space-y-4">
               <div className="group relative z-0 flex h-[100px] w-[100px] flex-col items-center justify-center rounded-full bg-red-300 transition-all hover:-translate-y-2 hover:scale-110 hover:bg-red-400">

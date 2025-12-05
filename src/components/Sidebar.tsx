@@ -2,6 +2,7 @@ import { BsLayoutSidebar } from "react-icons/bs";
 import { ReactNode } from "react";
 import Image from "next/image";
 
+// Slide-in sidebar used on the AI assistant page for controls and logout
 interface SidebarProps {
   open: boolean;
   user_name: string;

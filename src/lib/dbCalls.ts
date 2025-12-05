@@ -1,5 +1,6 @@
 import prisma from "./prisma";
 
+// Lightweight helper queries to keep Prisma access in one place
 export async function testDatabaseConnection() {
   try {
     // Execute a lightweight query to test connectivity
@@ -26,6 +27,7 @@ process.on("SIGTERM", async () => {
 
 export async function getProjects() {
   try {
+    // Return every primary project record for the landing page carousel
     const projects = await prisma.project.findMany();
     // console.log("Projects in getProjects:", projects);
     return projects;
@@ -37,6 +39,7 @@ export async function getProjects() {
 
 export async function getProjectbyId(id: number) {
   try {
+    // Used on detail pages to resolve the single project by numeric id
     const project = await prisma.project.findUnique({ where: { id } });
     return project;
   } catch (error) {
@@ -47,6 +50,7 @@ export async function getProjectbyId(id: number) {
 
 export async function getClones() {
   try {
+    // Pull proof-of-concept builds for the second project list
     const clones = await prisma.clone.findMany();
     return clones;
   } catch (error) {
@@ -57,6 +61,7 @@ export async function getClones() {
 
 export async function getClonebyId(id: number) {
   try {
+    // Fetch a single clone record for its detail page
     const clone = await prisma.clone.findUnique({ where: { id } });
     return clone;
   } catch (error) {
@@ -67,6 +72,7 @@ export async function getClonebyId(id: number) {
 
 export async function getApprovedRecommendations() {
   try {
+    // Show only recommendations that have been manually approved
     const recommendations = await prisma.recommendation.findMany({
       where: { isApproved: true },
     });
@@ -79,6 +85,7 @@ export async function getApprovedRecommendations() {
 
 export async function getRecommendationsByApprovalPriority() {
   try {
+    // Admin view lists unapproved testimonials first for review
     const recommendations = await prisma.recommendation.findMany({
       orderBy: {
         isApproved: "asc", // false (unapproved) comes before true
@@ -99,5 +106,6 @@ export async function isAdmin(email: string | undefined | null) {
     where: { email },
   });
 
+  // Truthy response indicates the signed-in user has admin rights
   return !!admin;
 }

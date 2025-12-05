@@ -1,5 +1,6 @@
 import React from "react";
 
+// Floating-label input used in the recommendation form
 interface InputProps {
   id: string;
   onChange: any;

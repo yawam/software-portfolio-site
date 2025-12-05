@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+// Quick reference card with my preferred contact details
 export default function ContactCard() {
   return (
     <div className="space-y-4 rounded-xl border-2 border-sky-300 p-2 shadow-xl shadow-sky-300/20">

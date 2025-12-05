@@ -9,6 +9,7 @@ import {
 } from "react";
 import ReactMarkdown from "react-markdown";
 
+// Lightweight chat widget that streams prompts to the /api/chat endpoint
 // Message type for chat
 interface Message {
   role: "user" | "assistant";
